@@ -73,21 +73,21 @@ with fundamental_data:
     # st.write(cf)
     # st.write('Wait for it to finish')
 
-from stocknews import StockNews
-with news:
-    st.header(f'News of the {tick}')
-    sn = StockNews(tick, save_news=False)
-    df_news = sn.read_rss()
-    for i in range(10):
-        st.subheader('New {} -  {}'.format(i + 1, df_news['title'][i]))
-        st.write(df_news['published'][i])
-        st.write(df_news['title'][i])
-        st.write(df_news['summary'][i])
-        title_sentiment = df_news['sentiment_title'][i]
-        st.success(f'Title Sentiment {title_sentiment}')
-        news_sentiment = df_news['sentiment_summary'][i]
-        st.success(f'News Sentiment {news_sentiment}')
-    st.write('News')
+# from stocknews import StockNews
+# with news:
+#     st.header(f'News of the {tick}')
+#     sn = StockNews(tick, save_news=False)
+#     df_news = sn.read_rss()
+#     for i in range(10):
+#         st.subheader('New {} -  {}'.format(i + 1, df_news['title'][i]))
+#         st.write(df_news['published'][i])
+#         st.write(df_news['title'][i])
+#         st.write(df_news['summary'][i])
+#         title_sentiment = df_news['sentiment_title'][i]
+#         st.success(f'Title Sentiment {title_sentiment}')
+#         news_sentiment = df_news['sentiment_summary'][i]
+#         st.success(f'News Sentiment {news_sentiment}')
+#     st.write('News')
 
 # number selector for Price and Volume
 
